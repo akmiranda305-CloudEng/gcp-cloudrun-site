@@ -25,6 +25,11 @@ resource "google_cloud_run_v2_service" "site" {
     }
   }
 
+  # The CI/CD pipeline deploys new images, so Terraform shouldn't undo that
+  lifecycle {
+    ignore_changes = [template[0].containers[0].image]
+  }
+
   depends_on = [google_artifact_registry_repository.site]
 }
 

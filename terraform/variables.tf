@@ -14,3 +14,8 @@ variable "image_tag" {
   type        = string
   default     = "v1"
 }
+
+variable "github_repo" {
+  description = "GitHub repo allowed to deploy, in owner/name form"
+  type        = string
+}
