@@ -83,10 +83,11 @@ Runs within Cloud Run's free tier at portfolio traffic levels. Actual spend as o
 - Add a custom domain and managed certificate
 - Run `terraform fmt`, `validate`, and `plan` on pull requests
 - Add uptime checks, alerting, and an SLO with Cloud Monitoring
+- https://github.com/akmiranda305-CloudEng/gcp-cloudrun-monitoring
 
 ## Teardown
 
-## Teardown
+
 
 `terraform destroy` removes everything Terraform manages (the Cloud Run service, Artifact Registry, and the identity setup). The state bucket, enabled APIs, and billing budget were created manually and need to be removed separately. Delete the state bucket last, since Terraform needs it to run `destroy`.
 
